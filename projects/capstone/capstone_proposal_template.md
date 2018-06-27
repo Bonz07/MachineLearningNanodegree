@@ -1,6 +1,7 @@
 # Machine Learning Engineer Nanodegree
 ## Capstone Proposal
 Andrew O'Gorman 
+
 June 27, 2018
 
 ## Proposal
@@ -11,7 +12,7 @@ For my Capstone prpject I will be using a deep learning approach to attempt to s
 
 Whales tails (referred to as 'Flukes') are like a barcode or fingerprint, with enough information to idneitify an individual whale. Traditionally scientist and marine biologists have taken and ammassed large numbers of photogrpahs of whales and then had to manually attempt to match newly photographed whales with historic images<sup>[4]</sup>. This process is time consuming and prone to a high degree of error, also there are challenges around getting the pictures due to the geographical spread of whales and the amount of time spent underwater. These  are some of the reasons why this problem suits a machine learning approach.
 
-Previous work was done at the University of Texas in 2003 to identify Humpback and Gray Whales using a patch-mathcing technique as a follow-up phase to WhaleNet once they specified the fluke type<sup>[5]</sup>. More recently a team at the University of Catalunya, Barelona used convolutional nerual networks to test the feasibility of using deep learning in whale recognition <sup>[6]</sup> using the NOAA Fisheries dataset. This paper outlines a successful approach to applying CNNs which I can look to build upon in this capstone project.
+Previous work was done at the University of Texas<sup>[5]</sup> in 2003 to identify Humpback and Gray Whales using a patch-mathcing technique as a follow-up phase to WhaleNet once they specified the fluke type. More recently a team at the University of Catalunya, Barelona<sup>[6]</sup> used convolutional nerual networks to test the feasibility of using deep learning in whale recognition using the NOAA Fisheries dataset. This paper outlines a successful approach to applying CNNs which I can look to build upon in this capstone project.
 
 I am keen to test my understanding of image recognition machine learning approaches using Deep Learning as there are several additional projects I would like to conduct upon completion of my Nanodegree. Therefore I hope this Capstone Project will be the foundation of further work for me in this field.
 
@@ -19,12 +20,28 @@ I am keen to test my understanding of image recognition machine learning approac
 ### Problem Statement
 _(approx. 1 paragraph)_
 
-In this section, clearly describe the problem that is to be solved. The problem described should be well defined and should have at least one relevant potential solution. Additionally, describe the problem thoroughly such that it is clear that the problem is quantifiable (the problem can be expressed in mathematical or logical terms) , measurable (the problem can be measured by some metric and clearly observed), and replicable (the problem can be reproduced and occurs more than once).
+The problem is to use the existing dataset of whale fluke images to build an understanding of each whales unique characteristics of their tails. By using this understanding we should then be able to take a new picture of a whale fluke and determine whether it matches a previously seen whale or whether it is a new whale. This problem is an image recognition challenge 
+
+
+
+*detailed description of problem to be solved and give one relevant solution
+*describe the problem so its quantifiable (maths or logical terms)
+*measurable
+*replicable (occurs more than once)
+
+
+
 
 ### Datasets and Inputs
 _(approx. 2-3 paragraphs)_
 
-In this section, the dataset(s) and/or input(s) being considered for the project should be thoroughly described, such as how they relate to the problem and why they should be used. Information such as how the dataset or input is (was) obtained, and the characteristics of the dataset or input, should be included with relevant references and citations as necessary It should be clear how the dataset(s) or input(s) will be used in the project and whether their use is appropriate given the context of the problem.
+*what is dataset
+*how does it relate to the problem, and why it should be used
+*how it was obtained
+*characteristics of the dataset
+*how the dataset will be used in the project
+
+
 
 ### Solution Statement
 _(approx. 1 paragraph)_
