@@ -17,7 +17,6 @@ I am keen to test my understanding of image recognition machine learning approac
 
 
 ### Problem Statement
-_(approx. 1 paragraph)_
 
 The problem is to use the existing dataset of whale fluke images to build an understanding of each whale's unique characteristics of their tails. By using this understanding we should then be able to take a new picture of a whale fluke and determine whether it matches a previously seen whale or whether it is a new whale. This problem is an image recognition challenge given the unique features of a whale's fluke as seen below:
 
