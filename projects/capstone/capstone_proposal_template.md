@@ -19,16 +19,11 @@ I am keen to test my understanding of image recognition machine learning approac
 ### Problem Statement
 _(approx. 1 paragraph)_
 
-The problem is to use the existing dataset of whale fluke images to build an understanding of each whales unique characteristics of their tails. By using this understanding we should then be able to take a new picture of a whale fluke and determine whether it matches a previously seen whale or whether it is a new whale. This problem is an image recognition challenge 
+The problem is to use the existing dataset of whale fluke images to build an understanding of each whale's unique characteristics of their tails. By using this understanding we should then be able to take a new picture of a whale fluke and determine whether it matches a previously seen whale or whether it is a new whale. This problem is an image recognition challenge given the unique features of a whale's fluke as seen below:
 
-![Fluke analysis](https://github.com/Bonz07/MachineLearningNanodegree/blob/master/projects/capstone/fluke.jpg "Fluke")
+![Fluke analysis image<sup>[7]</sup>](https://github.com/Bonz07/MachineLearningNanodegree/blob/master/projects/capstone/fluke.jpg "Fluke")
 
-
-*detailed description of problem to be solved and give one relevant solution
-*describe the problem so its quantifiable (maths or logical terms)
-*measurable
-*replicable (occurs more than once)
-
+This problem is a good one to solve as understanding and tracking whale populations across the globe will help in several fields including ocean conservation and global climate change. 
 
 
 
@@ -71,6 +66,7 @@ In this final section, summarize a theoretical workflow for approaching a soluti
 [4]: https://www.nationalgeographic.com/adventure/adventure-blog/2016/05/04/whos-that-whale-your-photo-could-help-i-d-a-humpback/
 [5]: https://link.springer.com/chapter/10.1007/3-540-45103-X_16
 [6]: https://arxiv.org/pdf/1604.05605.pdf
+[7]: http://www.alaskahumpbacks.org/matching.html
 
 
 **Before submitting your proposal, ask yourself. . .**
