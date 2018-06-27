@@ -7,7 +7,7 @@ June 27, 2018
 
 ### Domain Background
 
-For my Capstone prpject I will be using a deep learning approach to attempt to solve the Humpback Whale Identification project on Kaggle <sup>[1]</sup>. This is a similar image classification challenge to the dog breed classification challenge in the Deep Learning section of the Machine Learning Nanodegree. I have chosen this domain as I care deeply about our oceans and maratime life. I have been fascinated by whales since visiting the Natural History Museum<sup>[2]</sup>, London, as a child with my father and seeing the full skeleton of the blue whale. They are truely magnificent creatures, giants of the ocean and I feel passionately about helping organisations that support and monitor them. This project appeals to me as the work will help contribute to HappyWhale's <sup>[3]</sup> understand of the movement of whales by using machine learning to dramatically increse the efficiency of this identification work. 
+For my Capstone prpject I will be using a deep learning approach to attempt to solve the Humpback Whale Identification project on Kaggle <sup>[1]</sup>. This is a similar image classification challenge to the dog breed classification challenge in the Deep Learning section of the Machine Learning Nanodegree. I have chosen this domain as I care deeply about our oceans and maratime life. I have been fascinated by whales since visiting the Natural History Museum<sup>[2]</sup>, London, as a child with my father and seeing the full skeleton of the blue whale. They are truely magnificent creatures, giants of the ocean and I feel passionately about helping organisations that support and monitor them. This project appeals to me as the work will help contribute to Happy Whale's <sup>[3]</sup> understand of the movement of whales by using machine learning to dramatically increse the efficiency of this identification work. 
 
 Whales tails (referred to as 'Flukes') are like a barcode or fingerprint, with enough information to idneitify an individual whale. Traditionally scientist and marine biologists have taken and ammassed large numbers of photogrpahs of whales and then had to manually attempt to match newly photographed whales with historic images<sup>[4]</sup>. This process is time consuming and prone to a high degree of error, also there are challenges around getting the pictures due to the geographical spread of whales and the amount of time spent underwater. These  are some of the reasons why this problem suits a machine learning approach.
 
@@ -27,13 +27,12 @@ This problem is a good one to solve as understanding and tracking whale populati
 
 
 ### Datasets and Inputs
-_(approx. 2-3 paragraphs)_
 
-*what is dataset
-*how does it relate to the problem, and why it should be used
-*how it was obtained
-*characteristics of the dataset
-*how the dataset will be used in the project
+The dataset is split into the training and the testing set. The dataset consists of over 25,000 images of whale flukes, with 9851 labelled images in the training set and 15,611 images in the testing set. In total the dataset contains images for 4550 different whales. Each image varies in size (number of pixels), colour, quality (sharpness) and orientation. 
+
+The data was provided by Happy Whale, a citizen science organisation helping to track individual whales throughout the world's oceans. The images were gathered from research institutions and public contributions. The images specifically targeted whale flukes with the aim of being used to help identify the migration patterns of whales over time so as a dataset is ideally suited to the propsed problem.
+
+I will first look to pre-proccess the data to standardise the size, colour and proportions of all the images. This will allow me to build, train and test a deep learning algorithm to help identify whales within the dataset. The data is already split into training and testing sets, however I will look to further subdivide these as I train the model.
 
 
 
