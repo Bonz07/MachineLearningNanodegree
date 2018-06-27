@@ -1,15 +1,23 @@
 # Machine Learning Engineer Nanodegree
 ## Capstone Proposal
-Joe Udacity  
-December 31st, 2050
+Andrew O'Gorman 
+June 27, 2018
 
 ## Proposal
-_(approx. 2-3 pages)_
 
 ### Domain Background
 _(approx. 1-2 paragraphs)_
 
-In this section, provide brief details on the background information of the domain from which the project is proposed. Historical information relevant to the project should be included. It should be clear how or why a problem in the domain can or should be solved. Related academic research should be appropriately cited in this section, including why that research is relevant. Additionally, a discussion of your personal motivation for investigating a particular problem in the domain is encouraged but not required.
+For my Capstone prpject I will be using a deep learning approach to attempt to solve the Humpback Whale Identification project on Kaggle [^1]. This is a similar image classification challenge to the dog breed classification challenge in the Deep Learning section of the Machine Learning Nanodegree. I have chosen this domain as I care deeply about our oceans and maratime life. I have been fascinated by whales since visiting the Natural History Museum, London, as a child with my father and seeing the full skeleton of the blue whale. They are truely magnificent creatures, giants of the sea and I feel passionately about helping organisations that support and monitor them. This project appeals to me as the work will help contribute to HappyWhale's [^2] understand of the movement of whales by using machine learning to dramatically increse the efficiency of this identification work. 
+
+I am keen to test my understanding of image recognition machine learning approaches using Deep Learning as there are several additional projects I would like to conduct upon completion of my Nanodegree. Therefore I hope this Capstone Project will be the foundation of further work for me in this field.
+
+
+*academic research (and why it is relevent)
+*historical information relevant to this project, number of whales globally, how long this process usually takes, geographical spread, challenge of whales being mainly underwater, importance of tracking the whales and their population
+*good fit for machine learning project as it is essentially a image recognition challenge, as the whales tails (flutes) are deemed to be unique like a fingerprint
+
+
 
 ### Problem Statement
 _(approx. 1 paragraph)_
@@ -42,6 +50,10 @@ _(approx. 1 page)_
 In this final section, summarize a theoretical workflow for approaching a solution given the problem. Provide thorough discussion for what strategies you may consider employing, what analysis of the data might be required before being used, or which algorithms will be considered for your implementation. The workflow and discussion that you provide should align with the qualities of the previous sections. Additionally, you are encouraged to include small visualizations, pseudocode, or diagrams to aid in describing the project design, but it is not required. The discussion should clearly outline your intended workflow of the capstone project.
 
 -----------
+
+[^1]: https://www.kaggle.com/c/whale-categorization-playground
+[^2]: https://happywhale.com/home
+
 
 **Before submitting your proposal, ask yourself. . .**
 
