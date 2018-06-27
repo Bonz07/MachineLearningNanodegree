@@ -1,7 +1,6 @@
 # Machine Learning Engineer Nanodegree
 ## Capstone Proposal
 Andrew O'Gorman 
-
 June 27, 2018
 
 ## Proposal
@@ -22,6 +21,7 @@ _(approx. 1 paragraph)_
 
 The problem is to use the existing dataset of whale fluke images to build an understanding of each whales unique characteristics of their tails. By using this understanding we should then be able to take a new picture of a whale fluke and determine whether it matches a previously seen whale or whether it is a new whale. This problem is an image recognition challenge 
 
+![Fluke analysis](https://github.com/Bonz07/MachineLearningNanodegree/blob/master/projects/capstone/fluke.jpg "Fluke")
 
 
 *detailed description of problem to be solved and give one relevant solution
