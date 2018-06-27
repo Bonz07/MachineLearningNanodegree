@@ -6,17 +6,14 @@ June 27, 2018
 ## Proposal
 
 ### Domain Background
-_(approx. 1-2 paragraphs)_
 
-For my Capstone prpject I will be using a deep learning approach to attempt to solve the Humpback Whale Identification project on Kaggle <sup>[1]</sup>. This is a similar image classification challenge to the dog breed classification challenge in the Deep Learning section of the Machine Learning Nanodegree. I have chosen this domain as I care deeply about our oceans and maratime life. I have been fascinated by whales since visiting the Natural History Museum, London, as a child with my father and seeing the full skeleton of the blue whale. They are truely magnificent creatures, giants of the sea and I feel passionately about helping organisations that support and monitor them. This project appeals to me as the work will help contribute to HappyWhale's [^2] understand of the movement of whales by using machine learning to dramatically increse the efficiency of this identification work. 
+For my Capstone prpject I will be using a deep learning approach to attempt to solve the Humpback Whale Identification project on Kaggle <sup>[1]</sup>. This is a similar image classification challenge to the dog breed classification challenge in the Deep Learning section of the Machine Learning Nanodegree. I have chosen this domain as I care deeply about our oceans and maratime life. I have been fascinated by whales since visiting the Natural History Museum<sup>[2]</sup>, London, as a child with my father and seeing the full skeleton of the blue whale. They are truely magnificent creatures, giants of the ocean and I feel passionately about helping organisations that support and monitor them. This project appeals to me as the work will help contribute to HappyWhale's <sup>[3]</sup> understand of the movement of whales by using machine learning to dramatically increse the efficiency of this identification work. 
+
+Whales tails (referred to as 'Flukes') are like a barcode or fingerprint, with enough information to idneitify an individual whale. Traditionally scientist and marine biologists have taken and ammassed large numbers of photogrpahs of whales and then had to manually attempt to match newly photographed whales with historic images<sup>[4]</sup>. This process is time consuming and prone to a high degree of error, also there are challenges around getting the pictures due to the geographical spread of whales and the amount of time spent underwater. These  are some of the reasons why this problem suits a machine learning approach.
+
+Previous work was done at the University of Texas in 2003 to identify Humpback and Gray Whales using a patch-mathcing technique as a follow-up phase to WhaleNet once they specified the fluke type<sup>[5]</sup>. More recently a team at the University of Catalunya, Barelona used convolutional nerual networks to test the feasibility of using deep learning in whale recognition <sup>[6]</sup> using the NOAA Fisheries dataset. This paper outlines a successful approach to applying CNNs which I can look to build upon in this capstone project.
 
 I am keen to test my understanding of image recognition machine learning approaches using Deep Learning as there are several additional projects I would like to conduct upon completion of my Nanodegree. Therefore I hope this Capstone Project will be the foundation of further work for me in this field.
-
-
-*academic research (and why it is relevent)
-*historical information relevant to this project, number of whales globally, how long this process usually takes, geographical spread, challenge of whales being mainly underwater, importance of tracking the whales and their population
-*good fit for machine learning project as it is essentially a image recognition challenge, as the whales tails (flutes) are deemed to be unique like a fingerprint
-
 
 
 ### Problem Statement
@@ -52,7 +49,11 @@ In this final section, summarize a theoretical workflow for approaching a soluti
 -----------
 
 [1]: https://www.kaggle.com/c/whale-categorization-playground
-[^2]: https://happywhale.com/home
+[2]: http://www.nhm.ac.uk/discover/news/2017/july/museum-unveils-hope-the-blue-whale-skeleton.html
+[3]: https://happywhale.com/home
+[4]: https://www.nationalgeographic.com/adventure/adventure-blog/2016/05/04/whos-that-whale-your-photo-could-help-i-d-a-humpback/
+[5]: https://link.springer.com/chapter/10.1007/3-540-45103-X_16
+[6]: https://arxiv.org/pdf/1604.05605.pdf
 
 
 **Before submitting your proposal, ask yourself. . .**
