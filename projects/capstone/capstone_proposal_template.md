@@ -40,9 +40,11 @@ I will first look to pre-process the data to standardise the size, colour and pr
 
 The owners of the Kaggle competition hold a labelled list of the 15,611 testing images which result submissions are compared against. For each image in the test set I will predict up to 5 labels for the whale ID (e.g. *w_1287fbc*), where a whale is not predicted to be one of the existing whales in the training data they will be labeled as *new_whale*. The submissions file will contain a header and have the following format:
 
-Image,Id 
-00029b3a.jpg,new_whale w_1287fbc w_98baff9 w_7554f44 w_1eafe46
-0003c693.jpg,new_whale w_1287fbc w_98baff9 w_7554f44 w_1eafe46
+    Image,Id
+    
+    00029b3a.jpg,new_whale w_1287fbc w_98baff9 w_7554f44 w_1eafe46
+    
+    0003c693.jpg,new_whale w_1287fbc w_98baff9 w_7554f44 w_1eafe46
 
 The submissions are evaluated according to the Mean Average Precision (MAP) as seen below:
 
