@@ -37,9 +37,19 @@ I will first look to pre-process the data to standardise the size, colour and pr
 
 
 ### Solution Statement
-_(approx. 1 paragraph)_
 
-In this section, clearly describe a solution to the problem. The solution should be applicable to the project domain and appropriate for the dataset(s) or input(s) given. Additionally, describe the solution thoroughly such that it is clear that the solution is quantifiable (the solution can be expressed in mathematical or logical terms) , measurable (the solution can be measured by some metric and clearly observed), and replicable (the solution can be reproduced and occurs more than once).
+The owners of the Kaggle competition hold a labelled list of the 15,611 testing images which result submissions are compared against. For each image in the test set I will predict up to 5 labels for the whale ID (e.g. *w_1287fbc*), where a whale is not predicted to be one of the existing whales in the training data they will be labeled as *new_whale*. The submissions file will contain a header and have the following format:
+
+Image,Id 
+00029b3a.jpg,new_whale w_1287fbc w_98baff9 w_7554f44 w_1eafe46
+0003c693.jpg,new_whale w_1287fbc w_98baff9 w_7554f44 w_1eafe46
+
+The submissions are evaluated according to the Mean Average Precision (MAP) as seen below:
+
+    MAP@5 = \frac{1}{U} \sum_{u=1}^{U}  \sum_{k=1}^{min(n,5)} P(k)
+
+Where *U* is the number of images, *P(k)* is the precision at cutoff *k*, and *n* is the number predictions per image.
+
 
 ### Benchmark Model
 _(approximately 1-2 paragraphs)_
