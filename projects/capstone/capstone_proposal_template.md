@@ -92,6 +92,15 @@ Tuning models
 
 ### Resources
 
+* https://www.kaggle.com/c/whale-categorization-playground
+* http://www.nhm.ac.uk/discover/news/2017/july/museum-unveils-hope-the-blue-whale-skeleton.html
+* https://happywhale.com/home
+* https://www.nationalgeographic.com/adventure/adventure-blog/2016/05/04/whos-that-whale-your-photo-could-help-i-d-a-humpback/
+* https://link.springer.com/chapter/10.1007/3-540-45103-X_16
+* https://arxiv.org/pdf/1604.05605.pdf
+* http://www.alaskahumpbacks.org/matching.html
+* https://en.wikipedia.org/wiki/Perceptual_hashing
+
 [1]: https://www.kaggle.com/c/whale-categorization-playground
 [2]: http://www.nhm.ac.uk/discover/news/2017/july/museum-unveils-hope-the-blue-whale-skeleton.html
 [3]: https://happywhale.com/home
