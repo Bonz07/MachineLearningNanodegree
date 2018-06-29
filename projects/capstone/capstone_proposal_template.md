@@ -1,6 +1,6 @@
 # Machine Learning Engineer Nanodegree
 ## Capstone Proposal
-Andrew O'Gorman 
+Andrew O'Gorman
 June 27, 2018
 
 ## Proposal
@@ -40,6 +40,11 @@ I will first look to pre-process the data to standardise the size, colour and pr
 
 * describe the solution that is applicable to the domain and dataset
 * solution is quantifiable, measureble and replicable
+- Is each section (particularly **Solution Statement** and **Project Design**) written in a clear, concise and specific fashion? Are there any ambiguous terms or phrases that need clarification?
+- Would the intended audience of your project be able to understand your proposal?
+- Have you properly proofread your proposal to assure there are minimal grammatical and spelling mistakes?
+
+
 
 The solution I will be testing for this problem is to apply .......
 .... is a type of 
@@ -82,6 +87,9 @@ _(approx. 1 page)_
 * what analysis of the data might be required before being used
 * which algorithms will be considered for your implementation
 * include small visualisations, pseudocode, or diagrams to aid your descriptions
+- Is each section (particularly **Solution Statement** and **Project Design**) written in a clear, concise and specific fashion? Are there any ambiguous terms or phrases that need clarification?
+- Would the intended audience of your project be able to understand your proposal?
+- Have you properly proofread your proposal to assure there are minimal grammatical and spelling mistakes?
 
 Preprocessing the data
 Splitting the data into training subsets for use in neural net
@@ -112,10 +120,3 @@ Tuning models
 
 -----------
 
-**Before submitting your proposal, ask yourself. . .**
-
-- Does the proposal you have written follow a well-organized structure similar to that of the project template?
-- Is each section (particularly **Solution Statement** and **Project Design**) written in a clear, concise and specific fashion? Are there any ambiguous terms or phrases that need clarification?
-- Would the intended audience of your project be able to understand your proposal?
-- Have you properly proofread your proposal to assure there are minimal grammatical and spelling mistakes?
-- Are all the resources used for this project correctly cited and referenced?
