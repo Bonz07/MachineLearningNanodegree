@@ -91,7 +91,11 @@ I will look to run pre-processing of the training data in order to standardise t
 <img src="https://github.com/Bonz07/MachineLearningNanodegree/blob/master/projects/capstone/train/3ccc2a19.jpg" width="400">
 
 
-If there is variation between colour and grayscale images then I will likely convert all to grayscale. I will test to see whether I can crop the images around the flukes to reduce the background noise of the image, and if so what impact this has on the accuracy of the model. Once happy with this data preprocessing I will run the exact same pre-processing pipeline for the testing dataset.
+If there is variation between colour and grayscale images then I will likely convert all to grayscale. I will test to see whether I can crop the images around the flukes to reduce the background noise of the image (see below), and if so what impact this has on the accuracy of the model. 
+
+<img src="https://github.com/Bonz07/MachineLearningNanodegree/blob/master/projects/capstone/train/6ca26bb1.jpg" width="400">
+
+Once happy with this data preprocessing I will run the exact same pre-processing pipeline for the testing dataset.
 
 #### Data Augmentation
 Looking at the total number of images in the training dataset (9851) and the number of different whale (4250) it suggests that there will be two or less images per whale for the CNN to learn from. This is low and so I will look to boost this using data augmentation to include image rotation, image shift, image zoom and image grayscaling. This will also help reduce the chance of overfitting.
