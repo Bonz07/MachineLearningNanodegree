@@ -18,7 +18,7 @@ I am keen to test my understanding of image recognition using Deep Learning as t
 
 ### Problem Statement
 
-The problem is to use the existing dataset of whale fluke images to build an understanding of each whale's unique characteristics of their tails. By using this understanding we should then be able to take a new picture of a whale fluke and determine whether it matches a previously seen whale or whether it is in fact a new whale not previously seen in our dataset. 
+The problem is to use the existing dataset of whale fluke images to build an understanding of each whale's unique characteristics of their tails. By using this understanding, we should then be able to take a new picture of a whale fluke and determine whether it matches a previously seen whale or whether it is in fact a new whale not previously seen in our dataset. 
 
 This problem is an image recognition challenge given the unique features of a whale's fluke as seen below:
 
@@ -36,7 +36,7 @@ The dataset I will be using consists of over 25,000 images of whale flukes, with
 
 The data was provided by Happy Whale, a citizen science organisation helping to track individual whales throughout the world's oceans. The images were gathered from research institutions and public contributions. The images specifically targeted whale flukes with the aim of being used to help identify the migration patterns of whales over time so as a dataset is ideally suited to the proposed problem.
 
-I will first look to pre-process the data to standardise the size, colour and proportions of all the images. This will allow me to build, train and test a deep learning algorithm to help identify whales within the dataset. The data is already split into training and testing sets, however I will look to further subdivide the training set as I build my model.
+I will first look to pre-process the data to standardise the size, colour and proportions of all the images. This will allow me to build, train and test a deep learning algorithm to help identify whales within the dataset. The data is already split into training and testing sets, however, I will look to further subdivide the training set as I build my model.
 
 
 
@@ -60,7 +60,7 @@ Specifically, I intend to use Convolutional Neural Networks (CNNs) for this prob
 
 The benchmark score I will be comparing against was achieved using a technique known as Perceptual hashing (pHash)<sup>[8]</sup>. The pHash algorithm produces a fingerprint for each image which are analogous if features in the images are similar. This technique has been used previously to identify cases of online copyright infringement and also in digital forensics work due to its ability to have a correlation between hashes so similar images can be identified. 
 
-The pHash technique is able to identify which whale IDs the image is most similar to and then submit their 5 most likley matches for each image. This benchmark submission was then measured using the MAP formula below to get a Mean Average Position score of 0.36075.
+The pHash technique is able to identify which whale IDs the image is most similar to and then submit their 5 most likely matches for each image. This benchmark submission was then measured using the MAP formula below to get a Mean Average Position score of 0.36075.
 
 
 ### Evaluation Metrics
@@ -77,7 +77,7 @@ The submissions are evaluated according to the Mean Average Precision (MAP) as s
 
     MAP@5 = \frac{1}{U} \sum_{u=1}^{U}  \sum_{k=1}^{min(n,5)} P(k)
 
-Where **U** is the number of images, **P(k)** is the precision at cutoff **k**, and **n** is the number predictions per image. Scores are between 0 and 1 with a score of 1 being a perfect match with no error.
+Where **U** is the number of images, **P(k)** is the precision at cut-off **k**, and **n** is the number predictions per image. Scores are between 0 and 1 with a score of 1 being a perfect match with no error.
 
 ### Project Design
 
@@ -95,10 +95,10 @@ If there is variation between colour and grayscale images then I will likely con
 
 <img src="https://github.com/Bonz07/MachineLearningNanodegree/blob/master/projects/capstone/train/6ca26bb1.jpg" width="400">
 
-Once happy with this data preprocessing I will run the exact same pre-processing pipeline for the testing dataset.
+Once happy with this data pre-processing I will run the exact same pre-processing pipeline for the testing dataset.
 
 #### Data Augmentation
-Looking at the total number of images in the training dataset (9851) and the number of different whale (4250) it suggests that there will be two or less images per whale for the CNN to learn from. This is low and so I will look to boost this using data augmentation to include image rotation, image shift, image zoom and image grayscaling. This will also help reduce the chance of overfitting.
+Looking at the total number of images in the training dataset (9851) and the number of different whale (4250) it suggests that there will be two or less images per whale for the CNN to learn from. This is very low for training a model on and so I will look to boost this using data augmentation to include image rotation, image shift, image zoom and image grayscaling. This will also help reduce the chance of overfitting.
 
 
 ####  Model Design
@@ -110,7 +110,7 @@ The algorithm will be designed to provide the top 5 most likely whaleIDs as the 
 #### Training and Testing the Model
 I will then compile and train the model using the augmented training dataset. This will include batching the training dataset into smaller subsections and training over multiple epochs, saving the best weights from the highest scoring epoch.
 
-I will then use these weights in my model to generate a submission for the testing set and submit this result set to Kaggle for scoring. Once I have received this score I will look to adapt and evolve my model and approach depending on the score. There are several additional things I would like to look at including whether there are any duplicate images within the dataset and if so how these can be handled most effectively. Also how a transfer learning approach could be used to help improve the accuracy of the model.
+I will then use these weights in my model to generate a submission for the testing set and submit this result set to Kaggle for scoring. Once I have received this score I will look to adapt and evolve my model and approach depending on the score. There are several additional things I would like to look at including whether there are any duplicate images within the dataset and if so how these can be handled most effectively, and also how a transfer learning approach could be used to help improve the accuracy of the model.
 
 
 
