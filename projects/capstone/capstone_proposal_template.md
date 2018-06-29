@@ -32,7 +32,7 @@ This problem is a good one to solve as understanding and tracking whale populati
 
 ### Datasets and Inputs
 
-The dataset I will be using consists of over 25,000 images of whale flukes, with 9851 labelled images in the training set and 15,611 images in the testing set. In total the dataset contains images for 4550 different whales. Each image varies in size (number of pixels), colour, quality (sharpness) and orientation. 
+The dataset I will be using consists of over 25,000 images of whale flukes, with 9851 labelled images in the training set and 15,611 images in the testing set. In total the dataset contains images for 4250 different whales. Each image varies in size (number of pixels), colour, quality (sharpness) and orientation. 
 
 The data was provided by Happy Whale, a citizen science organisation helping to track individual whales throughout the world's oceans. The images were gathered from research institutions and public contributions. The images specifically targeted whale flukes with the aim of being used to help identify the migration patterns of whales over time so as a dataset is ideally suited to the proposed problem.
 
@@ -80,21 +80,28 @@ The submissions are evaluated according to the Mean Average Precision (MAP) as s
 Where **U** is the number of images, **P(k)** is the precision at cutoff **k**, and **n** is the number predictions per image.
 
 ### Project Design
-_(approx. 1 page)_
 
-* theoretical workflow for approaching a solution
-* what strategies will you consider employing
-* what analysis of the data might be required before being used
-* which algorithms will be considered for your implementation
-* include small visualisations, pseudocode, or diagrams to aid your descriptions
-- Is each section (particularly **Solution Statement** and **Project Design**) written in a clear, concise and specific fashion? Are there any ambiguous terms or phrases that need clarification?
-- Would the intended audience of your project be able to understand your proposal?
-- Have you properly proofread your proposal to assure there are minimal grammatical and spelling mistakes?
 
-Preprocessing the data
-Splitting the data into training subsets for use in neural net
-Models deployed
-Tuning models
+#### Data Exploration
+I will explore the data in detail to build my understanding of its structure and any trends that exist within it. This will include looking at how many images there are per whaleID, how the images vary in characteristics such as image size and also how many are in colour vs grayscale. 
+
+#### Data Pre-processing
+I will look to run pre-processing of the training data in order to standardise the images. This will include converting the images to a set size as an initial look at the images suggests that the size of each image varies significantly. I noticed upon initial inspection that some of the images contain text characters in the margins so I will look to remove this as it could skew the results. If there is variation between colour and grayscale images then I will likely convert all to grayscale. I will test to see whether I can crop the images around the flukes to reduce the background noise of the image, and if so what impact this has on the accuracy of the model. Once happy with this data preprocessing I will run the exact same pre-processing pipeline for the testing dataset.
+
+#### Data Augmentation
+Looking at the total number of images in the training dataset (9851) and the number of different whale (4250) it suggests that there will be two or less images per whale for the CNN to learn from. This is low and so I will look to boost this using data augmentation to include image rotation, image shift, image zoom and image grayscaling. This will also help reduce the chance of overfitting.
+
+
+####  Model Design
+As previously stated I intend to use a Convolutional Neural Network for this problem. Given the size of the dataset I will be using keras for the pre-processing and training of the CNN. Similar to the dog breed classification project the CNN will be made up of and input layer with several convolutional layers separated by pooling layers which will deepen the spatial information while decreasing the spatial dimension of each image. I will include dropout layers and batch normalisation layers to counter any possible overfitting. The output will be passed through several fully connected Dense layers with 4551 nodes, one for each whaleID (including one for new whales). Finally the output will go through a softmax activation layer to produce a probability that the image matches each of the possible whales. 
+
+The algorithm will be designed to provide the top 5 most likely whaleIDs as the prediction for each image. I will investigate whether a confidence threshold can be set to provide less than 5 answers when the likelihood of additional images are too low. I will need to tune the parameters for the layers within the CNN to optimise the model.
+
+
+#### Training and Testing the Model
+I will then compile and train the model using the augmented training dataset. This will include batching the training dataset into smaller subsections and training over multiple epochs, saving the best weights from the highest scoring epoch.
+
+I will then use these weights in my model to generate a submission for the testing set and submit this result set to Kaggle for scoring. Once I have received this score I will look to adapt and evolve my model and approach depending on the score. There are several additional things I would like to look at including whether there are any duplicate images within the dataset and if so how these can be handled most effectively. Also how a transfer learning approach could be used to help improve the accuracy of the model.
 
 
 
