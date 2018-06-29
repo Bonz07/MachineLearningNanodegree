@@ -38,7 +38,7 @@ I will first look to pre-process the data to standardise the size, colour and pr
 
 ### Solution Statement
 
-The owners of the Kaggle competition hold a labelled list of the 15,611 testing images which result submissions are compared against. For each image in the test set I will predict up to 5 labels for the whale ID (e.g. *w_1287fbc*), where a whale is not predicted to be one of the existing whales in the training data they will be labeled as *new_whale*. The submissions file will contain a header and have the following format:
+The owners of the Kaggle competition hold a labelled list of the 15,611 testing images which result submissions are compared against. For each image in the test set I will predict up to 5 labels for the whale ID (e.g. **w_1287fbc**), where a whale is not predicted to be one of the existing whales in the training data they will be labelled as **new_whale**. The submissions file will contain a header and have the following format:
 
     Image,Id
     
@@ -50,13 +50,17 @@ The submissions are evaluated according to the Mean Average Precision (MAP) as s
 
     MAP@5 = \frac{1}{U} \sum_{u=1}^{U}  \sum_{k=1}^{min(n,5)} P(k)
 
-Where *U* is the number of images, *P(k)* is the precision at cutoff *k*, and *n* is the number predictions per image.
+Where **U** is the number of images, **P(k)** is the precision at cutoff **k**, and **n** is the number predictions per image.
 
 
 ### Benchmark Model
-_(approximately 1-2 paragraphs)_
 
-In this section, provide the details for a benchmark model or result that relates to the domain, problem statement, and intended solution. Ideally, the benchmark model or result contextualizes existing methods or known information in the domain and problem given, which could then be objectively compared to the solution. Describe how the benchmark model or result is measurable (can be measured by some metric and clearly observed) with thorough detail.
+The benchmark used in this case is a pHash Benchmark with a score of 0.36075. 
+
+This benchmark result was achieved through using a technique known as Perceptual hashing<sup>[8]</sup>. The pHash algorithm produces a fingerprint for each image which are analogous if features in the images are similar. This technique has been used previously to identify cases of online copyright infringement, and also in digital forensics work, due to its ability to have a correlation between hashes so similar images can be identified. 
+
+The pHash technique is able to identify which whale IDs the image is most similar to and then submit the top 5 for each image. This result set was measured using the MAP formula above to get a Mean Average Position score of 0.36075.
+
 
 ### Evaluation Metrics
 _(approx. 1-2 paragraphs)_
@@ -77,6 +81,7 @@ In this final section, summarize a theoretical workflow for approaching a soluti
 [5]: https://link.springer.com/chapter/10.1007/3-540-45103-X_16
 [6]: https://arxiv.org/pdf/1604.05605.pdf
 [7]: http://www.alaskahumpbacks.org/matching.html
+[8]: https://en.wikipedia.org/wiki/Perceptual_hashing
 
 
 **Before submitting your proposal, ask yourself. . .**
