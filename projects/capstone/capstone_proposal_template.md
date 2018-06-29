@@ -42,23 +42,16 @@ I will first look to pre-process the data to standardise the size, colour and pr
 
 ### Solution Statement
 
-* describe the solution that is applicable to the domain and dataset
-* solution is quantifiable, measureble and replicable
-- Is each section (particularly **Solution Statement** and **Project Design**) written in a clear, concise and specific fashion? Are there any ambiguous terms or phrases that need clarification?
-- Would the intended audience of your project be able to understand your proposal?
-- Have you properly proofread your proposal to assure there are minimal grammatical and spelling mistakes?
-
-
 
 I will be using a Deep Learning approach for this image identification problem. Deep Learning makes use of neural networks which aim to mimic how the brain operates with neurons uses to fire pieces of information through a network to produce an output. By using this approach and building complex neural networks, Deep Learning can be more effective at determining the important features in a given image than a human. 
 
 Specifically, I intend to use Convolutional Neural Networks (CNNs) for this problem. I have chosen to use CNNs for several reasons:
 
 -  CNNs maintain spatial information by taking matrices as inputs when compared to traditional Multilayer Perceptrons. This allows us to use fewer weights as some parameters are shared, hence lowering the computational cost and training time.
+
 - CNNs work well across images where there are distortions due to lighting conditions, horizontal/vertical shifts, different poses etc.
+
 - Very good at identifying patterns within images by using filters to find specific groups of pixel groupings that are important.
-
-
 
 
 
