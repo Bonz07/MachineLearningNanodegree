@@ -1,8 +1,7 @@
 # Machine Learning Engineer Nanodegree
 ## Capstone Proposal
-Andrew O'Gorman
 
-June 29, 2018
+Andrew O'Gorman - June 29, 2018
 
 ## Proposal
 
@@ -51,12 +50,15 @@ I will first look to pre-process the data to standardise the size, colour and pr
 
 
 
-The solution I will be testing for this problem is to apply .......
-.... is a type of 
-I chose ..... for this problem for several reasons:
+I will be using a Deep Learning approach for this image identification problem. Deep Learning makes use of neural networks which aim to mimic how the brain operates with neurons uses to fire pieces of information through a network to produce an output. By using this approach and building complex neural networks, Deep Learning can be more effective at determining the important features in a given image than a human. 
 
-- 
--
+Specifically, I intend to use Convolutional Neural Networks (CNNs) for this problem. I have chosen to use CNNs for several reasons:
+
+-  CNNs maintain spatial information by taking matrices as inputs when compared to traditional Multilayer Perceptrons. This allows us to use fewer weights as some parameters are shared, hence lowering the computational cost and training time.
+- CNNs work well across images where there are distortions due to lighting conditions, horizontal/vertical shifts, different poses etc.
+- Very good at identifying patterns within images by using filters to find specific groups of pixel groupings that are important.
+
+
 
 
 
