@@ -7,13 +7,13 @@ Andrew O'Gorman - June 29, 2018
 
 ### Domain Background
 
-For my Capstone project I will be using a deep learning approach to attempt to solve the Humpback Whale Identification project on Kaggle <sup>[1]</sup>. This is a similar image classification challenge to the dog breed classification challenge in the Deep Learning section of the Machine Learning Nanodegree. I have chosen this domain as I care deeply about our oceans and maritime life. I have been fascinated by whales since visiting the Natural History Museum<sup>[2]</sup>, London, as a child with my father and seeing the full skeleton of the blue whale. They are truly magnificent creatures; giants of the ocean and I feel passionately about helping organisations that support and monitor them. This project appeals to me as the work will help contribute to Happy Whale's <sup>[3]</sup> understand of the movement of whales by using machine learning to dramatically increase the efficiency of this identification work. 
+For my Capstone project I will be using a deep learning approach to attempt to solve the Humpback Whale Identification project on Kaggle <sup>[1]</sup>. This is a similar image classification problem to the dog breed classification challenge in the Deep Learning section of the Machine Learning Nanodegree. I have chosen this domain as I care deeply about our oceans and maritime life. I have been fascinated by whales since visiting the Natural History Museum<sup>[2]</sup>, London, as a child with my father and seeing the full skeleton of the blue whale. They are truly magnificent creatures; giants of the ocean and I feel passionately about helping organisations that support and monitor them. This project appeals to me as the work will help contribute to Happy Whale's <sup>[3]</sup> understanding of the movement of whales by using machine learning to dramatically increase the efficiency of this identification work. 
 
 Whale tails (referred to as 'Flukes') are like a barcode or fingerprint, with enough information to identify an individual whale. Traditionally, scientists and marine biologists have taken and amassed large numbers of photograpahs of whales and then had to manually attempt to match newly photographed whales with historic images<sup>[4]</sup>. This process is time consuming and prone to a high degree of error, also there are challenges around getting the pictures due to the geographical spread of whales and the amount of time spent underwater. These are some of the reasons why this problem suits a machine learning approach.
 
-Previous work was done at the University of Texas<sup>[5]</sup> in 2003 to identify Humpback and Gray Whales using a patch-matching technique as a follow-up phase to WhaleNet once they specified the fluke type. More recently a team at the University of Catalunya in Barcelona<sup>[6]</sup> used convolutional neural networks to test the feasibility of using deep learning in whale recognition using the NOAA Fisheries dataset. Their paper outlines a successful approach to applying CNNs which I can look to build upon in this capstone project.
+Previous work was done at the University of Texas<sup>[5]</sup> in 2003 to identify Humpback and Gray Whales using a patch-matching technique as a follow-up phase to WhaleNet once they specified the fluke type. More recently a team at the University of Catalunya in Barcelona<sup>[6]</sup> used convolutional neural networks to test the feasibility of using deep learning in whale recognition using the NOAA Fisheries dataset. Their paper outlines a successful approach to applying CNNs to identification of the heads of whales and so this seems like a good approach to build upon in this capstone project.
 
-I am keen to test my understanding of image recognition machine learning approaches using Deep Learning as there are several additional projects I would like to conduct upon completion of my Nanodegree, therefore I hope this Capstone Project will be the foundation of further work for me in this field.
+I am keen to test my understanding of image recognition using Deep Learning as there are several additional projects I would like to conduct upon completion of my Nanodegree and so hope this Capstone Project will be the foundation of further work for me in this field.
 
 
 ### Problem Statement
@@ -36,14 +36,14 @@ The dataset I will be using consists of over 25,000 images of whale flukes, with
 
 The data was provided by Happy Whale, a citizen science organisation helping to track individual whales throughout the world's oceans. The images were gathered from research institutions and public contributions. The images specifically targeted whale flukes with the aim of being used to help identify the migration patterns of whales over time so as a dataset is ideally suited to the proposed problem.
 
-I will first look to pre-process the data to standardise the size, colour and proportions of all the images. This will allow me to build, train and test a deep learning algorithm to help identify whales within the dataset. The data is already split into training and testing sets, however I will look to further subdivide these as I train the model.
+I will first look to pre-process the data to standardise the size, colour and proportions of all the images. This will allow me to build, train and test a deep learning algorithm to help identify whales within the dataset. The data is already split into training and testing sets, however I will look to further subdivide the training set as I build my model.
 
 
 
 ### Solution Statement
 
 
-I will be using a Deep Learning approach for this image identification problem. Deep Learning makes use of neural networks which aim to mimic how the brain operates with neurons uses to fire pieces of information through a network to produce an output. By using this approach and building complex neural networks, Deep Learning can be more effective at determining the important features in a given image than a human. 
+I will be using a Deep Learning approach for this image identification problem. Deep Learning makes use of neural networks which aim to mimic how the brain operates with neurons used to fire pieces of information through a network to produce an output. By using this approach and building complex neural networks, Deep Learning can be more effective at determining the important features in a given image than a human. 
 
 Specifically, I intend to use Convolutional Neural Networks (CNNs) for this problem. I have chosen to use CNNs for several reasons:
 
@@ -51,7 +51,7 @@ Specifically, I intend to use Convolutional Neural Networks (CNNs) for this prob
 
 - CNNs work well across images where there are distortions due to lighting conditions, horizontal/vertical shifts, different poses etc.
 
-- Very good at identifying patterns within images by using filters to find specific groups of pixel groupings that are important.
+- They are very good at identifying patterns within images by using filters to find specific groups of pixel groupings that are important.
 
 
 
@@ -77,23 +77,27 @@ The submissions are evaluated according to the Mean Average Precision (MAP) as s
 
     MAP@5 = \frac{1}{U} \sum_{u=1}^{U}  \sum_{k=1}^{min(n,5)} P(k)
 
-Where **U** is the number of images, **P(k)** is the precision at cutoff **k**, and **n** is the number predictions per image.
+Where **U** is the number of images, **P(k)** is the precision at cutoff **k**, and **n** is the number predictions per image. Scores are between 0 and 1 with a score of 1 being a perfect match with no error.
 
 ### Project Design
 
 
 #### Data Exploration
-I will explore the data in detail to build my understanding of its structure and any trends that exist within it. This will include looking at how many images there are per whaleID, how the images vary in characteristics such as image size and also how many are in colour vs grayscale. 
+I will explore the data in detail to build my understanding of its structure and any trends that exist within it. This will include looking at how many images there are per whaleID, how the images vary in characteristics such as image size and also how many if the images are in colour vs grayscale. 
 
 #### Data Pre-processing
-I will look to run pre-processing of the training data in order to standardise the images. This will include converting the images to a set size as an initial look at the images suggests that the size of each image varies significantly. I noticed upon initial inspection that some of the images contain text characters in the margins so I will look to remove this as it could skew the results. If there is variation between colour and grayscale images then I will likely convert all to grayscale. I will test to see whether I can crop the images around the flukes to reduce the background noise of the image, and if so what impact this has on the accuracy of the model. Once happy with this data preprocessing I will run the exact same pre-processing pipeline for the testing dataset.
+I will look to run pre-processing of the training data in order to standardise the images. This will include converting the images to a set size as an initial look at the images suggests that the size of each image varies significantly. I noticed upon initial inspection that some of the images contain text characters in the margins (as seen in the image below) so I will look to remove this as it could skew the results. 
+
+![Text on image](https://github.com/Bonz07/MachineLearningNanodegree/blob/master/projects/capstone/train/3ccc2a19.jpg "Text on image")
+
+If there is variation between colour and grayscale images then I will likely convert all to grayscale. I will test to see whether I can crop the images around the flukes to reduce the background noise of the image, and if so what impact this has on the accuracy of the model. Once happy with this data preprocessing I will run the exact same pre-processing pipeline for the testing dataset.
 
 #### Data Augmentation
 Looking at the total number of images in the training dataset (9851) and the number of different whale (4250) it suggests that there will be two or less images per whale for the CNN to learn from. This is low and so I will look to boost this using data augmentation to include image rotation, image shift, image zoom and image grayscaling. This will also help reduce the chance of overfitting.
 
 
 ####  Model Design
-As previously stated I intend to use a Convolutional Neural Network for this problem. Given the size of the dataset I will be using keras for the pre-processing and training of the CNN. Similar to the dog breed classification project the CNN will be made up of and input layer with several convolutional layers separated by pooling layers which will deepen the spatial information while decreasing the spatial dimension of each image. I will include dropout layers and batch normalisation layers to counter any possible overfitting. The output will be passed through several fully connected Dense layers with 4551 nodes, one for each whaleID (including one for new whales). Finally the output will go through a softmax activation layer to produce a probability that the image matches each of the possible whales. 
+As previously stated I intend to use a Convolutional Neural Network for this problem. Given the size of the dataset I will be using keras for the pre-processing and training of the CNN. Similar to the dog breed classification project the CNN will be made up of an input layer with several convolutional layers separated by pooling layers which will deepen the spatial information while decreasing the spatial dimension of each image. I will include dropout layers and batch normalisation layers to counter any possible overfitting. The output will be passed through several fully connected Dense layers with 4551 nodes, one for each whaleID (including one for new whales). Finally the output will go through a softmax activation layer to produce a probability that the image matches each of the possible whales. 
 
 The algorithm will be designed to provide the top 5 most likely whaleIDs as the prediction for each image. I will investigate whether a confidence threshold can be set to provide less than 5 answers when the likelihood of additional images are too low. I will need to tune the parameters for the layers within the CNN to optimise the model.
 
