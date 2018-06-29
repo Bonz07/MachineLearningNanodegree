@@ -88,7 +88,7 @@ I will explore the data in detail to build my understanding of its structure and
 #### Data Pre-processing
 I will look to run pre-processing of the training data in order to standardise the images. This will include converting the images to a set size as an initial look at the images suggests that the size of each image varies significantly. I noticed upon initial inspection that some of the images contain text characters in the margins (as seen in the image below) so I will look to remove this as it could skew the results. 
 
-<img src="https://github.com/Bonz07/MachineLearningNanodegree/blob/master/projects/capstone/train/3ccc2a19.jpg" width="50" height="50">
+<img src="https://github.com/Bonz07/MachineLearningNanodegree/blob/master/projects/capstone/train/3ccc2a19.jpg" width="250">
 
 
 If there is variation between colour and grayscale images then I will likely convert all to grayscale. I will test to see whether I can crop the images around the flukes to reduce the background noise of the image, and if so what impact this has on the accuracy of the model. Once happy with this data preprocessing I will run the exact same pre-processing pipeline for the testing dataset.
