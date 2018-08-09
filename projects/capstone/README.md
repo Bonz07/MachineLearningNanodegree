@@ -4,8 +4,37 @@
 
 **Note**
 
-The Capstone is a two-staged project. The first is the proposal component, where you can receive valuable feedback about your project idea, design, and proposed solution. This must be completed prior to your implementation and submitting for the capstone project. 
+The Capstone is a two-staged project. 
 
-You can find the [capstone proposal rubric here](https://review.udacity.com/#!/rubrics/410/view), and the [capstone project rubric here](https://review.udacity.com/#!/rubrics/108/view). Please ensure that you are following directions correctly before submitting these two stages which encapsulate your capstone.
+**Project Proposal Review**
 
-Please email [machine-support@udacity.com](mailto:machine-support@udacity.com) if you have any questions.
+The review of my Capstone proposal can be found here: https://review.udacity.com/#!/reviews/1323151
+
+**Python Libraries**
+
+For the Capstone project I used the following Python libraries:
+
+* pandas
+* matplotlib.pyplot
+* matplotlib.pylab
+* os
+* math
+* collections
+* PIL
+* numpy
+* seaborn
+* glob
+* scipy.fftpack
+* csv
+* sklearn.preprocessing
+* sklearn.model_selection
+* keras
+* keras.models
+* keras.layers
+* keras.preprocessing.image
+
+**Dataset**
+
+The data used for the project was downloaded from the follwoing Kaggle competition page:
+
+https://www.kaggle.com/c/whale-categorization-playground/data
